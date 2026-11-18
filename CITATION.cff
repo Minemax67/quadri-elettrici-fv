@@ -3,6 +3,7 @@ message: "Se usi questo programma o ne ridistribuisci una versione modificata, c
 title: "Quadri elettrici e impianto FV"
 version: "3.36"
 date-released: "2026-11-18"
+doi: "10.5281/zenodo.24355351"
 license: GPL-3.0-or-later
 type: software
 authors:

@@ -2,6 +2,8 @@
 
 <p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="docs/img/logo_su_scuro.svg"><img src="docs/img/logo.svg" alt="Minemax" width="300"></picture></p>
 
+<p align="center"><a href="https://doi.org/10.5281/zenodo.24355351"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.24355351.svg" alt="DOI 10.5281/zenodo.24355351"></a></p>
+
 Programma gratuito per disegnare **quadri elettrici monofase** e **impianti fotovoltaici off-grid**: si inseriscono i componenti nei quadri e i fili tra i morsetti, e il programma disegna da solo gli schemi.
 
 È un **unico file** (`index.html`): si scarica, si apre con doppio clic in Chrome, Edge o Firefox e funziona anche senza internet. Non installa nulla, non usa librerie esterne e non invia dati a nessuno.
@@ -87,4 +89,4 @@ Se trovi un errore (un morsetto sbagliato, uno schema che non torna), apri una s
 
 ## Citazione
 
-Vedi [`CITATION.cff`](CITATION.cff).
+Ogni versione pubblicata come release è archiviata su Zenodo. Il DOI [10.5281/zenodo.24355351](https://doi.org/10.5281/zenodo.24355351) rappresenta tutte le versioni e porta sempre all'ultima; sulla pagina di Zenodo c'è anche il DOI di ciascuna versione. I dati per citare il programma sono in [`CITATION.cff`](CITATION.cff).
