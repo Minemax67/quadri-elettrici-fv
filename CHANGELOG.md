@@ -2,6 +2,12 @@
 
 Novità di ogni versione, dalla più recente. Le versioni precedenti alla 2.92 non sono registrate qui.
 
+## 3.36 – Pagina del programma (18 novembre 2026)
+
+- Nella finestra «ℹ Informazioni» compare ora l'indirizzo della pagina del programma su GitHub (https://github.com/Minemax67/quadri-elettrici-fv): è un collegamento su cui si può cliccare. Lì si scarica l'ultima versione e si leggono le novità.
+- Nella Guida, capitolo 13, c'è una riga in più che lo cita.
+- Non cambia altro: schemi, simulazione, stampe, file SVG esportati e progetti salvati sono identici alla 3.35. Non serve rifare nulla.
+
 ## 3.35 – Timer nel simulatore (18 novembre 2026)
 
 - Nella scheda Simulazione, scegliendo lo schema multifilare, dentro la scheda di ogni temporizzatore compare il tempo impostato («imp. 2 s»). Quando il timer è alimentato il conteggio sale («1,4 / 2 s») e una barra si riempie; a tempo scaduto compare la spunta verde.

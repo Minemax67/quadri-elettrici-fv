@@ -1,7 +1,7 @@
 cff-version: 1.2.0
 message: "Se usi questo programma o ne ridistribuisci una versione modificata, cita l'autore e indica le modifiche (GPL-3.0-or-later)."
 title: "Quadri elettrici e impianto FV"
-version: "3.35"
+version: "3.36"
 date-released: "2026-11-18"
 license: GPL-3.0-or-later
 type: software

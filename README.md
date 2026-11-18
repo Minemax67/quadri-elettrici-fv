@@ -6,7 +6,7 @@ Programma gratuito per disegnare **quadri elettrici monofase** e **impianti foto
 
 È un **unico file** (`index.html`): si scarica, si apre con doppio clic in Chrome, Edge o Firefox e funziona anche senza internet. Non installa nulla, non usa librerie esterne e non invia dati a nessuno.
 
-Versione attuale: **3.35** (18 novembre 2026), edizione condivisa.
+Versione attuale: **3.36** (18 novembre 2026), edizione condivisa.
 
 ![Fronte del quadro ATS](docs/img/fronte_quadri.png)
 
@@ -36,7 +36,7 @@ Versione attuale: **3.35** (18 novembre 2026), edizione condivisa.
 
 ## Come si usa
 
-1. Vai alla pagina [Releases](https://github.com/Minemax67/quadri-elettrici-fv/releases/latest) e scarica il file `Quadri_elettrici_FV_3.35.html` (in fondo, sotto *Assets*). Il file [`index.html`](index.html) di questo repository è lo stesso programma: serve alla pagina web e, se preferisci, si scarica col pulsante **Raw** → *Salva con nome*.
+1. Vai alla pagina [Releases](https://github.com/Minemax67/quadri-elettrici-fv/releases/latest) e scarica il file `Quadri_elettrici_FV_3.36.html` (in fondo, sotto *Assets*). Il file [`index.html`](index.html) di questo repository è lo stesso programma: serve alla pagina web e, se preferisci, si scarica col pulsante **Raw** → *Salva con nome*.
 2. Aprilo con doppio clic nel browser.
 3. Nella scheda **Progetto, quadri e file** puoi caricare l'impianto di esempio da 5 kW con **Carica impianto FV di esempio**, oppure aprire un tuo file con **Apri progetto**.
 4. Salva spesso il progetto con **Salva progetto (.json)**: il salvataggio automatico del browser non passa da una versione del programma all'altra, il file `.json` sì.
