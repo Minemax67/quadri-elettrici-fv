@@ -2,6 +2,18 @@
 
 Novità di ogni versione, dalla più recente. Le versioni precedenti alla 2.92 non sono registrate qui.
 
+## 3.37 – Blocchi pronti, componenti di comando e nuovo esempio da 7,2 kW (19 novembre 2026)
+
+- Blocchi pronti: dalla scheda «Progetto, quadri e file», o sopra l'elenco «Aggiungi al quadro», il pulsante «Blocchi pronti» inserisce un gruppo di componenti già collegati tra loro. Ci sono nove blocchi: rete e interruttore generale, collettore di terra, Cerbo GX con fusibile, banco batterie (da 1 a 4 batterie con fusibili, sezionatore e shunt), inverter con 2 MPPT, stringhe FV con o senza regolatore MPPT, quadro ATS con timer (con il consenso del Cerbo GX oppure automatico, con precedenza all'inverter) e partenze utenze.
+- Per ogni blocco la finestra elenca i «punti di collegamento» e propone un componente e un morsetto liberi del progetto per ciascuno: li puoi cambiare o lasciare «da collegare dopo». Se nel progetto c'è già lo stesso blocco, puoi sostituirlo tenendo i fili verso il resto dell'impianto, le sigle, la marca, il codice e le note. «Annulla» toglie l'intero blocco in un colpo solo. Dopo l'inserimento controlla la Distinta: i morsetti rimasti liberi si collegano a mano.
+- Spie, selettori e pulsanti pronti: nel gruppo «Commutazione e comando» della palette ci sono ora le spie bianca, verde, rossa, blu e gialla, il selettore 1-0-2 a manopola, il pulsante verde (marcia), il pulsante rosso (arresto) e il fungo di emergenza, già compilati, una riga ciascuno. Si trovano anche scrivendo «spia», «selettore» o «pulsante» nella ricerca. Non c'è più la voce generica «Selettore / pulsante / spia».
+- Sul fronte quadro ognuno è disegnato com'è davvero: la spia col suo colore, il selettore con la manopola e le posizioni, il pulsante tondo, il fungo giallo e rosso, il voltmetro con il display. Il disegno dipende dal testo del campo «Dispositivo» e il colore dalla parola scritta (bianca, verde, rossa, blu, gialla). Nella simulazione le spie si accendono del colore scritto.
+- Impianto di esempio: «Carica impianto FV di esempio» (e il progetto che si vede alla prima apertura) è ora l'impianto off-grid da 7,2 kW con ATS: punto di consegna, quadro ATS con i due contattori, i timer e il selettore AUTO / RETE / INVERTER, inverter con 2 MPPT, quadro DC con 3 batterie e 3 regolatori, quadro di campo con 5 stringhe. Ha tutti i fili e funziona anche nella Simulazione. Il vecchio esempio da 5 kW non c'è più.
+- Simulazione: la velocità parte da ×1 (tempo reale) e le voci sono ×1, ×2, ×5 e ×10. Prima partiva da ×5 e c'erano anche ×20 e ×60, che non servivano.
+- Schema multifilare: c'è un pallino dove un filo si dirama o si unisce a un altro; i fusibili sul solo negativo restano in linea con le stringhe; un alimentatore con lato alternata e lato continua sta in un solo gruppo. Il disegno di un impianto già fatto può cambiare un poco per questo.
+- Importazione dei listini ABB: viene letta anche la famiglia BLD20A30 (SN201 L, S201 L, DS201 L H, F202 da 25 e 40 A), che prima veniva saltata.
+- Un progetto salvato con la 3.36 si apre come prima: stessi componenti e stessi fili. Non serve rifare nulla.
+
 ## 3.36 – Pagina del programma (18 novembre 2026)
 
 - Nella finestra «ℹ Informazioni» compare ora l'indirizzo della pagina del programma su GitHub (https://github.com/Minemax67/quadri-elettrici-fv): è un collegamento su cui si può cliccare. Lì si scarica l'ultima versione e si leggono le novità.

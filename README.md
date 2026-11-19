@@ -8,7 +8,7 @@ Programma gratuito per disegnare **quadri elettrici monofase** e **impianti foto
 
 È un **unico file** (`index.html`): si scarica, si apre con doppio clic in Chrome, Edge o Firefox e funziona anche senza internet. Non installa nulla, non usa librerie esterne e non invia dati a nessuno.
 
-Versione attuale: **3.36** (18 novembre 2026), edizione condivisa.
+Versione attuale: **3.37** (19 novembre 2026), edizione condivisa.
 
 ![Fronte del quadro ATS](docs/img/fronte_quadri.png)
 
@@ -19,6 +19,8 @@ Versione attuale: **3.36** (18 novembre 2026), edizione condivisa.
 - **Schema unifilare** e **schema multifilare**, disegnati dai fili inseriti, con stampa, SVG e PDF.
 - **Comunicazione** e **Rete**: cavi dati tra batterie, inverter, Cerbo GX e apparecchi di rete.
 - **Distinta e verifiche**: elenco dei componenti e controlli automatici sul progetto, compreso un avviso quando «Alimentato da» di uno scaricatore non coincide con i suoi fili.
+- **Blocchi pronti**: gruppi di componenti già collegati tra loro (rete e interruttore generale, banco batterie, inverter con 2 MPPT, stringhe FV con o senza regolatore, quadro ATS con timer, partenze utenze) da inserire e unire al resto dell'impianto; «Annulla» toglie tutto il blocco in un colpo solo.
+- **Comandi pronti**: spie colorate, selettore a manopola, pulsanti e fungo di emergenza già compilati nella palette, disegnati sul fronte quadro com'è davvero.
 - **Simulazione**: si accendono e spengono rete e inverter, si spostano i selettori e si vede quali contattori si chiudono, quali relè si eccitano e quali timer partono, con il registro di ogni commutazione. Nello schema unifilare ogni contattore, interruttore, sezionatore e fusibile porta la scritta CHIUSO (verde) o APERTO (rosso) e un riquadro dello stesso colore; un componente senza fili porta la scritta grigia NON COLLEGATO. Anche la **corrente continua** è seguita polo per polo: batterie, stringhe FV e alimentatori sono sorgenti, il positivo e il negativo passano da sezionatori, interruttori e fusibili (integro o SALTATO) fino a inverter, regolatori e Cerbo GX, e l'inverter produce corrente alternata solo se ha la batteria. Nello schema unifilare un tratto di continua è colorato solo se arrivano sia il positivo sia il negativo: con un fusibile saltato il tratto a valle resta grigio. Gli scaricatori (SPD) restano grigi: non sono sorgenti né un percorso della corrente.
 - **Guida** integrata nel programma (PDF in [`docs/`](docs/Guida_quadri_elettrici.pdf)).
 
@@ -34,13 +36,13 @@ Versione attuale: **3.36** (18 novembre 2026), edizione condivisa.
 
 | Corrente continua nello schema unifilare | Pannello «Corrente continua» |
 | --- | --- |
-| ![Fusibile saltato nel quadro DC](docs/img/corrente_continua_unifilare.png) | ![Batteria scollegata: avvisi sul pannello](docs/img/corrente_continua_pannello.png) |
+| ![Fusibile saltato nel quadro DC](docs/img/corrente_continua_unifilare.png) | ![Batterie scollegate: avvisi sul pannello](docs/img/corrente_continua_pannello.png) |
 
 ## Come si usa
 
-1. Vai alla pagina [Releases](https://github.com/Minemax67/quadri-elettrici-fv/releases/latest) e scarica il file `Quadri_elettrici_FV_3.36.html` (in fondo, sotto *Assets*). Il file [`index.html`](index.html) di questo repository è lo stesso programma: serve alla pagina web e, se preferisci, si scarica col pulsante **Raw** → *Salva con nome*.
+1. Vai alla pagina [Releases](https://github.com/Minemax67/quadri-elettrici-fv/releases/latest) e scarica il file `Quadri_elettrici_FV_3.37.html` (in fondo, sotto *Assets*). Il file [`index.html`](index.html) di questo repository è lo stesso programma: serve alla pagina web e, se preferisci, si scarica col pulsante **Raw** → *Salva con nome*.
 2. Aprilo con doppio clic nel browser.
-3. Nella scheda **Progetto, quadri e file** puoi caricare l'impianto di esempio da 5 kW con **Carica impianto FV di esempio**, oppure aprire un tuo file con **Apri progetto**.
+3. Nella scheda **Progetto, quadri e file** puoi caricare l'impianto di esempio da 7,2 kW con **Carica impianto FV di esempio**, oppure aprire un tuo file con **Apri progetto**.
 4. Salva spesso il progetto con **Salva progetto (.json)**: il salvataggio automatico del browser non passa da una versione del programma all'altra, il file `.json` sì.
 
 ## Privacy
