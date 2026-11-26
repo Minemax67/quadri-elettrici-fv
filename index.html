@@ -4753,6 +4753,7 @@ function elemsOf(c){
   case 'COMANDO':add('no','13','14','NO');add('no','23','24','NO');add('nc','11','12','NC');add('nc','21','22','NC');break;
   case 'ACCAUX':add('no','11','14','NO');add('nc','11','12','NC');break;
   case 'ACCSG':add('co','C1','C2','sganciatore');break;
+  case 'AFCI':add('no','O+','O−','uscita allarme');break;   /* uscita d'allarme O+/O− del rilevatore d'arco: contatto NO nel circuito di comando */
   case 'FUS':case 'FUSDC':case 'MORSF':add('fu','1','2','fusibile');add('fu','3','4','fusibile');break;
   case 'MT':case 'MTD':case 'IG':case 'ID':case 'MTDC':case 'SEZDC':add('br','1','2','');add('br','3','4','');break;
   default:break;}
