@@ -8,21 +8,25 @@ Programma gratuito per disegnare **quadri elettrici monofase** e **impianti foto
 
 È un **unico file** (`index.html`): si scarica, si apre con doppio clic in Chrome, Edge o Firefox e funziona anche senza internet. Non installa nulla, non usa librerie esterne e non invia dati a nessuno.
 
-Versione attuale: **3.37** (19 novembre 2026), edizione condivisa.
+Versione attuale: **3.38** (26 novembre 2026), edizione condivisa. Tutte le novità dalla 3.37 sono nel [`CHANGELOG.md`](CHANGELOG.md).
 
 ![Fronte del quadro ATS](docs/img/fronte_quadri.png)
 
 ## Cosa fa
 
-- **Fronte quadri**: componenti sulla guida DIN o su piastra su misura, con apparecchi fuori guida; «Alimentato da» si può proporre dai fili già disegnati.
-- **Collegamenti**: fili tra i morsetti con tipo, sezione e sigla, e lista di cablaggio.
+- **Fronte quadri**: componenti sulla guida DIN o su piastra su misura, con apparecchi fuori guida; «Alimentato da» si può proporre dai fili già disegnati. Con la **scatola del quadro** (catalogo di centralini o misure scritte a mano) il Fronte è in **scala vera**: moduli da 17,5 mm, apparecchi alti 90 mm, guide all'interasse scelto e finestra del pannello frontale. I pallini sono i morsetti veri: con **🔌 Fili** i fili di Collegamenti si vedono sopra i componenti e con **✏ Traccia fili** si tirano direttamente sul quadro; i fili si spostano anche a mano (passaggio, corsia ed etichette), compresi quelli che passano nei fori del sensore di corrente. Zoom del quadro, barre laterali comprimibili e gruppo di componenti (Ctrl + clic) con la loro lista di cablaggio.
+- **Collegamenti**: fili tra i morsetti con tipo, sezione e sigla; contatti dei relè, dei contattori e dei temporizzatori disegnati dentro il riquadro, morsetti in corto delle morsettiere su guida, lista di cablaggio e **lista per componente** (anteprima, stampa A4 e CSV).
 - **Schema unifilare** e **schema multifilare**, disegnati dai fili inseriti, con stampa, SVG e PDF.
 - **Comunicazione** e **Rete**: cavi dati tra batterie, inverter, Cerbo GX e apparecchi di rete.
 - **Distinta e verifiche**: elenco dei componenti e controlli automatici sul progetto, compreso un avviso quando «Alimentato da» di uno scaricatore non coincide con i suoi fili.
 - **Blocchi pronti**: gruppi di componenti già collegati tra loro (rete e interruttore generale, banco batterie, inverter con 2 MPPT, stringhe FV con o senza regolatore, quadro ATS con timer, partenze utenze) da inserire e unire al resto dell'impianto; «Annulla» toglie tutto il blocco in un colpo solo.
 - **Comandi pronti**: spie colorate, selettore a manopola, pulsanti e fungo di emergenza già compilati nella palette, disegnati sul fronte quadro com'è davvero.
-- **Simulazione**: si accendono e spengono rete e inverter, si spostano i selettori e si vede quali contattori si chiudono, quali relè si eccitano e quali timer partono, con il registro di ogni commutazione. Nello schema unifilare ogni contattore, interruttore, sezionatore e fusibile porta la scritta CHIUSO (verde) o APERTO (rosso) e un riquadro dello stesso colore; un componente senza fili porta la scritta grigia NON COLLEGATO. Anche la **corrente continua** è seguita polo per polo: batterie, stringhe FV e alimentatori sono sorgenti, il positivo e il negativo passano da sezionatori, interruttori e fusibili (integro o SALTATO) fino a inverter, regolatori e Cerbo GX, e l'inverter produce corrente alternata solo se ha la batteria. Nello schema unifilare un tratto di continua è colorato solo se arrivano sia il positivo sia il negativo: con un fusibile saltato il tratto a valle resta grigio. Gli scaricatori (SPD) restano grigi: non sono sorgenti né un percorso della corrente.
+- **Simulazione**: si accendono e spengono rete e inverter, si spostano i selettori e si vede quali contattori si chiudono, quali relè si eccitano e quali timer partono; nello schema multifilare i contatti si muovono (in verde quando l'apparecchio è azionato) e il registro mostra l'ultimo evento, espandibile agli ultimi sei. Nello schema unifilare ogni contattore, interruttore, sezionatore e fusibile porta la scritta CHIUSO (verde) o APERTO (rosso) e un riquadro dello stesso colore; un componente senza fili porta la scritta grigia NON COLLEGATO. Anche la **corrente continua** è seguita polo per polo: batterie, stringhe FV e alimentatori sono sorgenti, il positivo e il negativo passano da sezionatori, interruttori e fusibili (integro o SALTATO) fino a inverter, regolatori e Cerbo GX, e l'inverter produce corrente alternata solo se ha la batteria. Nello schema unifilare un tratto di continua è colorato solo se arrivano sia il positivo sia il negativo: con un fusibile saltato il tratto a valle resta grigio. Gli scaricatori (SPD) restano grigi: non sono sorgenti né un percorso della corrente.
+- **Assistente IA**: «Prepara per l'assistente IA» crea un file di testo con le istruzioni e il tuo progetto; lo dai a un assistente (Claude, ChatGPT…) e riapri nel programma il file che ti restituisce, dopo un controllo automatico all'apertura.
+- **Libreria**: tra gli altri, temporizzatori Fiber, Panasonic, Finder e ABB, relè Finder 40.52 su zoccolo 95.05, rilevatore d'arco e sensore Fonrich FR-DCMG, server seriale Hi-Flying HF2211 e blocco di distribuzione ERKO.
 - **Guida** integrata nel programma (PDF in [`docs/`](docs/Guida_quadri_elettrici.pdf)).
+
+![Fronte con i fili di Collegamenti disegnati sopra i componenti](docs/img/fronte_fili.png)
 
 | Schema unifilare | Schema multifilare |
 | --- | --- |
@@ -40,7 +44,7 @@ Versione attuale: **3.37** (19 novembre 2026), edizione condivisa.
 
 ## Come si usa
 
-1. Vai alla pagina [Releases](https://github.com/Minemax67/quadri-elettrici-fv/releases/latest) e scarica il file `Quadri_elettrici_FV_3.37.html` (in fondo, sotto *Assets*). Il file [`index.html`](index.html) di questo repository è lo stesso programma: serve alla pagina web e, se preferisci, si scarica col pulsante **Raw** → *Salva con nome*.
+1. Vai alla pagina [Releases](https://github.com/Minemax67/quadri-elettrici-fv/releases/latest) e scarica il file `Quadri_elettrici_FV_3.38.html` (in fondo, sotto *Assets*). Il file [`index.html`](index.html) di questo repository è lo stesso programma: serve alla pagina web e, se preferisci, si scarica col pulsante **Raw** → *Salva con nome*.
 2. Aprilo con doppio clic nel browser.
 3. Nella scheda **Progetto, quadri e file** puoi caricare l'impianto di esempio da 7,2 kW con **Carica impianto FV di esempio**, oppure aprire un tuo file con **Apri progetto**.
 4. Salva spesso il progetto con **Salva progetto (.json)**: il salvataggio automatico del browser non passa da una versione del programma all'altra, il file `.json` sì.
