@@ -5406,6 +5406,27 @@ presenti nel file.
    guarda come sono cablati KM, KT, KA già presenti e ripeti lo stesso schema.
  - Se la richiesta tocca l'impianto già cablato, ricava i collegamenti esistenti dal file (guarda gli apparecchi
    vicini e le loro sezioni) e mantienili coerenti: stessa sezione per lo stesso tipo di tratto, stesso tipo di filo.
+ - CIRCUITO DI COMANDO NEL MULTIFILARE (come lo ricava il programma, verificato nel codice):
+   · Lo schema di un quadro usa solo i fili che hanno almeno un capo in quel quadro.
+   · Le linee di alimentazione in alto (+ o L) e in basso (− o N) nascono solo da un punto elettrico che ha un filo
+     di tipo "P"/"L" (oppure "M"/"N") E un morsetto di un apparecchio di potenza: RETE, INV, BUS, UPS, STAB, CHG, PSU,
+     MT, MTD, IG, ID, MTDC, SEZDC, BATT, FV, MPPT (o i morsetti di potenza di un CONT). Morsetti, fusibili, relè e
+     apparecchi di rete NON bastano.
+   · Se l'alimentazione del comando arriva da un ALTRO quadro (per esempio un alimentatore PSU nel quadro AC che arriva
+     tramite fusibili e morsetti), le bobine compaiono con «manca l'alimentazione». Rimedio: nel quadro del comando
+     aggiungi un BUS fuori guida, con «tensione» "24 V DC" (morsetti + e −) o "230 V AC" (L, N, PE), uni false,
+     feed "__none", dispositivo «Arrivo … da …», e collegalo con un filo "P" e uno "M" (o "L" e "N") ai morsetti dove
+     l'alimentazione entra nel quadro; scrivi nelle note del BUS e dei due fili che è un riferimento di schema e non
+     un pezzo né un filo da posare.
+   · Dalla bobina il programma risale fino alla linea + passando SOLO per contatti che conosce (al massimo 8):
+     REL 11-14, 11-12, 21-24, 21-22, 31-34, 31-32, 41-44, 41-42, 13-14, 23-24; TIMER 15-18, 15-16, 25-28, 25-26;
+     SAFE 13-14, 23-24; COMANDO 13-14, 23-24, 11-12, 21-22; ACCAUX 11-14, 11-12; GX R1 e R2 (COM-NO, COM-NC);
+     AFCI O+→O− (relè interno NO dell'allarme); FUS, FUSDC, MORSF 1-2 e 3-4; interruttori 1-2 e 3-4.
+     Un collegamento interno che non è in questo elenco interrompe il percorso: non inventare fili per «saltarlo»,
+     avvisa l'utente.
+   · Le bobine riconosciute sono: CONT, REL, TIMER, SAFE (A1-A2) e ACCSG (C1-C2).
+ - MAGNETOTERMICI DC (MTDC): il + entra su 1 ed esce da 2, il − entra su 3 ed esce da 4. Se li inverti il multifilare
+   disegna un polo con l'ingresso scollegato e i due morsetti insieme in basso (scritta «2+1» o «4+3»).
 
 ──────────────────────────────────────────────────────────────
 6. COSA CONTROLLA IL PROGRAMMA E COSA NO (verificato con prove)
